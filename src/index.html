@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Currency Exchanger</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Currency Converter</h1>
+      <form id="currency-form">
+        <div>
+          <label for="amount">Enter amount (in USD):</label>
+          <input
+            type="number"
+            id="amount"
+            name="amount"
+            min="0"
+            step="0.01"
+            required
+          />
+        </div>
+        <div>
+          <label for="fromCurrency">From currency:</label>
+          <select id="fromCurrency" name="fromCurrency">
+            <option value="USD">US Dollar (USD)</option>
+          </select>
+        </div>
+        <div>
+          <label for="toCurrency">To currency:</label>
+          <select id="toCurrency" name="toCurrency">
+            <option value="KRW">South Korean Won (KRW)</option>
+            <option value="EUR">Euro (EUR)</option>
+            <option value="JPY">Japanese Yen (JPY)</option>
+            <option value="GBP">British Pound (GBP)</option>
+            <option value="CAD">Canadian Dollar (CAD)</option>
+          </select>
+        </div>
+        <button type="submit">Convert</button>
+      </form>
+      <div id="result"></div>
+    </div>
+  </body>
+</html>
