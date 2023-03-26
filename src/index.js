@@ -1,27 +1,12 @@
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/styles.css";
+import CurrencyService from "./currency-service.js";
 
 // Business Logic
 
 function getExchange(amount, toCurrency) {
-  let promise = new Promise(function (resolve, reject) {
-    let request = new XMLHttpRequest();
-    const url = `https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/USD`;
-
-    request.addEventListener("loadend", function () {
-      const response = JSON.parse(this.responseText);
-      if (this.status === 200) {
-        resolve(response);
-      } else {
-        reject(this);
-      }
-    });
-
-    request.open("GET", url, true);
-    request.send();
-  });
-
+  let promise = CurrencyService.getExchange();
   promise.then(
     function (response) {
       printElements(response, amount, toCurrency);
