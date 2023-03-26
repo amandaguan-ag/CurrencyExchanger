@@ -9,6 +9,8 @@ function getExchange(amount, toCurrency) {
     const response = JSON.parse(this.responseText);
     if (this.status === 200) {
       printElements(response, amount, toCurrency);
+    } else {
+      printError(this, amount, toCurrency);
     }
   });
 
@@ -31,6 +33,12 @@ function handleFormSubmission(event) {
   document.querySelector("#amount").value = null;
   document.querySelector("#toCurrency").value = null;
   getExchange(amount, toCurrency);
+}
+
+function printError(request, amount, toCurrency) {
+  document.querySelector(
+    "#showResponse"
+  ).innerText = `There was an error converting ${amount} USD to ${toCurrency}. Error message: ${request.statusText}`;
 }
 
 window.addEventListener("load", function () {
