@@ -19,8 +19,17 @@ Not available
 
 ## Setup/Installation Requirements
 
-- Create a .env file and add it to your .gitignore. Make sure to commit your .gitignore at this point, before moving on!
-- Place your API key in an .env file at the top level of your directory.
+- Visit the ExchangeRate-API site. Input your email address and click the "Get Free Key" button.
+- You'll be prompted to create an account with your email, first name and a password. Agree to the terms of use and click "Get Started!"
+- At this point, you'll be able to access a dashboard that includes your API key as well as your remaining API calls for the month.
+- Make note of this key.Do not share
+- Clone this repository to your device.
+- In your terminal,navigate to the project directory where you have cloned this repo.
+- run npm install
+- run npm run build
+- create .env file in the root of the project directory
+- Place your token in an .env in a varible name API_KEY.
+- Include .env in .gitignore. Make sure to commit your .gitignore at this point, before moving on!
 
 ## Known Bugs
 
