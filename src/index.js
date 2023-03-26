@@ -6,18 +6,17 @@ import CurrencyService from "./currency-service.js";
 // Business Logic
 
 function getExchange(amount, toCurrency) {
-  let promise = CurrencyService.getExchange();
-  promise.then(
-    function (response) {
+  CurrencyService.getExchange()
+    .then(function (response) {
       printElements(response, amount, toCurrency);
-    },
-    function (request) {
-      printError(request, amount, toCurrency);
-    }
-  );
+    })
+    .catch(function (error) {
+      printError(error, amount, toCurrency);
+    });
 }
 
 // UI Logic
+
 function printElements(response, amount, toCurrency) {
   const amountValue = amount;
   const toCurrencyValue = toCurrency;
@@ -29,10 +28,10 @@ function printElements(response, amount, toCurrency) {
   ).innerText = `${amountValue} USD is equal to ${convertedAmount} ${toCurrencyValue}`;
 }
 
-function printError(request, amount, toCurrency) {
+function printError(error, amount, toCurrency) {
   const amountValue = amount;
   const toCurrencyValue = toCurrency;
-  const errorMessage = request.statusText;
+  const errorMessage = error.message;
 
   document.querySelector(
     "#showResponse"
