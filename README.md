@@ -1,28 +1,35 @@
-# (Application Name)
+# _Currency Exchanger_
 
-#### (Brief Description of Application)
-
-#### By (Your Name Here)
-
-## Technologies Used
-
-* _Javascript_
-* _HTML_
-* _CSS_
+#### By _**Amanda Guan**_
 
 ## Description
 
+_A currency exchange application. The user should be able to type in an amount (in U.S. dollars) and choose the currency both to and from . To determine the most recent exchange rate, your application will make an API call to the following exchange rate API._
+
+## link to Github Page
+
+Not available
+
+## Technologies Used
+
+- JavaScript
+- Node
+- HTML / CSS
+- Webpack
+
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
+- Create a .env file and add it to your .gitignore. Make sure to commit your .gitignore at this point, before moving on!
+- Place your API key in an .env file at the top level of your directory.
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+- No known bugs
 
 ## License
+
+_Copyright (c) 2023, Amanda GUan_
+
+## Contact Information
+
+Amanda Guan <ag.amandaguan@gmail.com>
