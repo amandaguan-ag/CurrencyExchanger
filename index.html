@@ -8,7 +8,7 @@
       <h1>Currency Converter</h1>
       <form id="currency-form">
         <div>
-          <label for="amount">Enter amount (in USD):</label>
+          <label for="amount">Enter amount:</label>
           <input
             type="number"
             id="amount"
@@ -22,11 +22,23 @@
           <label for="fromCurrency">From currency:</label>
           <select id="fromCurrency" name="fromCurrency">
             <option value="USD">US Dollar (USD)</option>
+            <option value="KRW">South Korean Won (KRW)</option>
+            <option value="EUR">Euro (EUR)</option>
+            <option value="JPY">Japanese Yen (JPY)</option>
+            <option value="GBP">British Pound (GBP)</option>
+            <option value="CAD">Canadian Dollar (CAD)</option>
+            <option value="AUD">Australian Dollar (AUD)</option>
+            <option value="BRL">Brazilian Real (BRL)</option>
+            <option value="CHF">Swiss Franc (CHF)</option>
+            <option value="CNY">Chinese Yuan (CNY)</option>
+            <option value="MXN">Mexican Peso (MXN)</option>
+            <option value="RUB">Russian Ruble (RUB)</option>
           </select>
         </div>
         <div>
           <label for="toCurrency">To currency:</label>
           <select id="toCurrency" name="toCurrency">
+            <option value="USD">US Dollar (USD)</option>
             <option value="KRW">South Korean Won (KRW)</option>
             <option value="EUR">Euro (EUR)</option>
             <option value="JPY">Japanese Yen (JPY)</option>
@@ -44,5 +56,5 @@
       </form>
       <p id="showResponse"></p>
     </div>
-  </body>
+  <script defer src="bundle.js"></script></body>
 </html>
